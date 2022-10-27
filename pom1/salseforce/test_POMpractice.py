@@ -12,5 +12,5 @@ class Testuses(BaseTest):
     @pytest.mark.parametrize("username,password",exceldata("UserData"))
     def test_salseforce(self,username,password):
         l = login(self.driver)
-        print("username -- ",username,"        ","password -- ",password)
+        print("hello everyone")
         l.usersignin(username,password)
