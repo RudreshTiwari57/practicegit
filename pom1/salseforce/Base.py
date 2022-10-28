@@ -32,12 +32,12 @@ def log_on_failure(request, OpeningBrowser):
 
 @pytest.fixture(params=["chrome"], scope="function")
 def OpeningBrowser(request):
-    option = Options()
-    option.headless = True
+    # option = Options()
+    # option.headless = True
     config = configparser.ConfigParser()
     config.read("C:\pom1\salseforce\config.ini")
     if request.param == "chrome":
-        driver = webdriver.Chrome(ChromeDriverManager().install(),options=option)
+        driver = webdriver.Chrome(ChromeDriverManager().install())
     elif request.param == "firefox":
         driver = webdriver.Firefox(GeckoDriverManager().install())
     else:
