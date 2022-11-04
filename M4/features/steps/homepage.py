@@ -99,17 +99,20 @@ def step_impl(context):
 
 @then(u'Fill your name')
 def step_impl(context):
-    pass
+    context.driver.switch_to.window(driverbf)
+    context.driver.find_element(By.XPATH, "//*[@id='name']").send_keys("Rudresh")
 
 
 @then(u'click on alert button')
 def step_impl(context):
-    pass
+    context.driver.find_element(By.XPATH,"//*[@id='alertbtn']").click()
 
 
 @then(u'get text for alert window and click on the ok button')
 def step_impl(context):
-    pass
+    t3 = context.driver.switch_to_alert()
+    print(t3.text)
+    t3.accept()
 
 
 
@@ -117,16 +120,19 @@ def step_impl(context):
 
 @then(u'enter your name')
 def step_impl(context):
-    pass
+    context.driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div[3]/fieldset/input[1]").send_keys("Rudresh")
 
 
 @then(u'click on conform button')
 def step_impl(context):
-    pass
+    context.driver.find_element(By.XPATH, "//*[@id='confirmbtn']").click()
+    time.sleep(3)
 
 @then(u'get text for alert window and click on cancel button')
 def step_impl(context):
-    pass
+    t4 = context.driver.switch_to_alert()
+    print(t4.text)
+    t4.dismiss()
 
 
 @then(u'get the data for first row and first column')
