@@ -34,6 +34,7 @@ def step_impl(context):
 
 @then(u'select apple and peace from list')
 def step_impl(context):
+
     dd1 = Select(context.driver.find_element(By.XPATH, "//*[@id='multiple-select-example']"))
     allopt = dd1.options
     for opt in allopt:

@@ -1,1 +1,0 @@
-[{"buildOrder":10,"reportUrl":"http://localhost:9090/job/pom/10/allure","reportName":"AllureReport","data":{"run":4,"retry":0}},{"buildOrder":9,"reportUrl":"http://localhost:9090/job/pom/9/allure","reportName":"AllureReport","data":{"run":4,"retry":0}},{"buildOrder":8,"reportUrl":"http://localhost:9090/job/pom/8/allure","reportName":"AllureReport","data":{"run":4,"retry":0}}]
